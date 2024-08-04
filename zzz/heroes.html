@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+	*{
+	  margin:0;
+    	  padding: 0;
+	  box-sizing:border-box;
+	  text-decoration:none;
+	}
+	body{
+	  background:#111;
+	}
+	main{
+	  width:100vw;
+	  display:flex;
+	  flex-direction:column;
+	  justify-content:center;
+	  align-items:center;
+	}
+	nav{
+	 position:absolute;
+	 z-index:99;
+	 width: 100vw;
+	 display:flex;
+	 justify-content:space-between;
+	 color:white;
+	 padding:.25em;
+	 padding-left:1em;
+	 padding-right:1em;
+	 font-size:1.5em;
+	 margin:0;
+	}
+	nav a{
+	 color:white;
+	}
+	.menu{
+	 display:flex;
+	 gap:2em; 
+	}
+	.video-container{
+	 width:100vw;
+	 top:-5em;
+	 position:absolute;
+	 margin:0;
+	 padding:0;
+	 background:#111;
+	}
+	.video-container video{
+	 width:100%;
+	 height: 100%;
+	 margin:0;
+	 padding:0;
+	}
+	.tour-container{
+	 display:flex;
+	 justify-content:center;
+	 align-items:center;
+	 width:100vw;	
+	 height:100vh;
+	}
+	.tour-btn{
+	 position:absolute;
+	 z-index:999;
+	 font-size:100px;
+	 font-weight:bold;
+	 color:yellow;
+	 }
+
+	.one{
+	 width:100vw;
+	 height:100vh;
+	 display:flex;
+	 justify-content:center;
+	 position:absolute;
+	}
+	.one-inner{
+	  background: linear-gradient(to bottom, red,#111);
+	  height:25vw;
+	  top:-20em;
+	  position:absolute;
+	  width:25vw;
+	  border-radius:50%;
+	}
+
+	.heroes-content{
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.26);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(4.3px);
+	-webkit-backdrop-filter: blur(4.3px);
+	border: 1px solid rgba(255, 255, 255, 0.21);
+	width:1000px;
+	
+	margin-top:5em;
+	padding:1em;
+	color:white;
+ 
+	 align-items:center;
+display:flex;
+flex-direction:column;
+	}
+
+	.search-container{
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.26);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(4.3px);
+	-webkit-backdrop-filter: blur(4.3px);
+	border: 1px solid rgba(255, 255, 255, 0.21);
+
+	 padding:.5em;
+	 border-radius:.75em;
+	 display:flex;
+	 gap:2em;
+	 font-size:1.25em;
+	  justify-content:center;
+	 align-items:center;
+	}
+	.search-input{
+	 padding:.5em;
+	 border-radius:.75em;
+	 width: 35%;
+	}
+	
+	
+    </style>
+  </head>
+  <body>
+	<header>
+		<nav>
+		
+		<div class="menu">
+		  <div><a href="z.html">Tour of Heroes</a></div>
+		  <div><a href="game.html">Game</a></div>
+		  <div><a href="heroes.html">Heroes</a></div>
+		  <div><a href="news.html">News</a></div>
+		  <div><a href="esports.html">ESports</a></div>
+		</div>
+		<div>Settings</div>
+		</nav>
+	</header>
+	<main>
+		<div class="one">
+		 <div class="one-inner">
+		 </div>	
+		</div>
+		<section class="heroes-content">
+			<div class="search-container">
+			  <input type="text" name="search-hero" placeholder="Search Hero" class="search-input">
+			  <div> Filter </div>
+			  <select>
+			    <option>Strength</option>
+			    <option>Agility</option>
+			    <option>Intelligence</option>
+			  </select>
+			  <select>
+			    <option>Soft Support</option>
+			    <option>Hard Support</option>
+			    <option>Offlaner</option>
+   			    <option>Midlaner</option>
+   			    <option>Carry</option>
+			  </select>
+			</div>
+
+			<div style="display:flex;flex-wrap: wrap;gap:2em;margin-top:2em; width:900px; background:;justify-content:center;">
+			   
+			  <div style="height:250px;width:180px;background:white;display:flex;align-items:end;flex-direction:column;">
+			    <img src="https://i.pinimg.com/originals/5d/7b/2c/5d7b2c289e5fb9f3ce0a3dd378d88c79.jpg" alt="hero-img" width=180 height=250 />
+			    <p style="color:black;margin:10px;font-weight:bold;font-size:25px;color:white;text-shadow:0 0 2px black;position:absolute;"> Juggernaut </p>
+			  </div>
+  <div style="height:250px;width:180px;background:white;display:flex;align-items:end;flex-direction:column;">
+			    <img src="https://i.pinimg.com/originals/5d/7b/2c/5d7b2c289e5fb9f3ce0a3dd378d88c79.jpg" alt="hero-img" width=180 height=250 />
+			    <p style="color:black;margin:10px;font-weight:bold;font-size:25px;color:white;text-shadow:0 0 2px black;position:absolute;"> Juggernaut </p>
+			  </div>
+  <div style="height:250px;width:180px;background:white;display:flex;align-items:end;flex-direction:column;">
+			    <img src="https://i.pinimg.com/originals/5d/7b/2c/5d7b2c289e5fb9f3ce0a3dd378d88c79.jpg" alt="hero-img" width=180 height=250 />
+			    <p style="color:black;margin:10px;font-weight:bold;font-size:25px;color:white;text-shadow:0 0 2px black;position:absolute;"> Juggernaut </p>
+			  </div>
+
+  <div style="height:250px;width:180px;background:white;display:flex;align-items:end;flex-direction:column;">
+			    <img src="https://i.pinimg.com/originals/5d/7b/2c/5d7b2c289e5fb9f3ce0a3dd378d88c79.jpg" alt="hero-img" width=180 height=250 />
+			    <p style="color:black;margin:10px;font-weight:bold;font-size:25px;color:white;text-shadow:0 0 2px black;position:absolute;"> Juggernaut </p>
+			  </div>
+  <div style="height:250px;width:180px;background:white;display:flex;align-items:end;flex-direction:column;">
+			    <img src="https://i.pinimg.com/originals/5d/7b/2c/5d7b2c289e5fb9f3ce0a3dd378d88c79.jpg" alt="hero-img" width=180 height=250 />
+			    <p style="color:black;margin:10px;font-weight:bold;font-size:25px;color:white;text-shadow:0 0 2px black;position:absolute;"> Juggernaut </p>
+			  </div>
+  <div style="height:250px;width:180px;background:white;display:flex;align-items:end;flex-direction:column;">
+			    <img src="https://i.pinimg.com/originals/5d/7b/2c/5d7b2c289e5fb9f3ce0a3dd378d88c79.jpg" alt="hero-img" width=180 height=250 />
+			    <p style="color:black;margin:10px;font-weight:bold;font-size:25px;color:white;text-shadow:0 0 2px black;position:absolute;"> Juggernaut </p>
+			  </div>
+  			
+			  <div>
+			  </div>
+			</div>
+		</section>
+		
+	</main>
+  </body>
+</html>

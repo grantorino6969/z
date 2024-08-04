@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+	*{
+	  margin:0;
+    	  padding: 0;
+	  box-sizing:border-box;
+	  text-decoration:none;
+	}
+	body{
+	  background:#111;
+	}
+	nav{
+	 position:absolute;
+	 z-index:99;
+	 width: 100vw;
+	 display:flex;
+	 justify-content:space-between;
+	 color:white;
+	 padding:.25em;
+	 padding-left:1em;
+	 padding-right:1em;
+	 font-size:1.5em;
+	 margin:0;
+	}
+	nav a{
+	 color:white;
+	}
+	.menu{
+	 display:flex;
+	 gap:2em; 
+	}
+	.video-container{
+	 width:100vw;
+	 top:-5em;
+	 position:absolute;
+	 margin:0;
+	 padding:0;
+	 background:#111;
+	}
+	.video-container video{
+	 width:100%;
+	 height: 100%;
+	 margin:0;
+	 padding:0;
+	}
+	.tour-container{
+	 display:flex;
+	 justify-content:center;
+	 align-items:center;
+	 width:100vw;	
+	 height:100vh;
+	}
+	.tour-btn{
+	 position:absolute;
+	 z-index:999;
+	 font-size:100px;
+	 font-weight:bold;
+	 color:yellow;
+	 }
+
+	.one{
+	 width:100vw;
+	 height:100vh;
+	 display:flex;
+	 justify-content:center;
+	}
+	.one-inner{
+	  background: linear-gradient(to bottom, red,#111);
+	  height:25vw;
+	  top:-20em;
+	  position:absolute;
+	  width:25vw;
+	  border-radius:50%;
+	}
+
+
+/* KIDLAT */
+.kidlatBox{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+}
+.kidlatBox img
+{
+    position:absolute ;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:10;
+   
+}
+.kidlatBox img:not(:first-child)
+{
+    animation: kidlat 2s linear infinite;
+    animation-delay: calc(-0.8s * var(--i));
+    opacity: 0.17;
+}
+@keyframes kidlat
+{
+   0% 
+    {
+        rotate:5deg;
+    }
+   
+    100%
+    {
+       display:none;
+    } 
+} 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .kidlatBox img{
+        height:222px;
+        width:222px;
+        top:7em;
+    }
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .kidlatBox img{
+        height:222px;
+        width:222px;
+        top:10em;
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .kidlatBox img{
+        height:444px;
+        width:444px;
+        top:2.5em;
+        
+    } 
+  } 
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .kidlatBox img{
+        height:555px;
+        width:555px;
+        top:-3em;
+    } 
+  } 
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .kidlatBox img{
+        height:555px;
+        width:555px;
+        top:-3em;
+    } 
+  }
+
+
+/* INVOKER */
+.invoker-kid
+{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    position:fixed;
+    z-index:-999;
+    animation: floating 2s ease-in-out infinite;
+    animation: bouncing 2.5s ease-in-out infinite; 
+  
+}
+.invoker-kid img
+{
+    height:25em;
+    width:15em;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .invoker-kid{
+        margin-top:10em;
+    }
+    .invoker-kid img{
+      height:30em;
+      width:20em;
+  }
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .invoker-kid{
+        margin-top:10em;
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .invoker-kid{
+        margin-top:20em;
+    } 
+  } 
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .invoker-kid{
+        margin-top:5em;
+      
+    } 
+    .invoker-kid img{
+        height:60em;
+        width:35em;
+    }
+  } 
+  /* Extra large devices (large laptops and desktops, 1200px and up)
+  @media only screen and (min-width: 1200px) {
+    .invoker-kid{
+        margin-top:20em;
+    } 
+  } */
+
+ @keyframes floating {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes bouncing {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, -20px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+	
+    </style>
+  </head>
+  <body>
+	<header>
+		<nav>
+		
+		<div class="menu">
+		  <div><a href="z.html">Tour of Heroes</a></div>
+		  <div><a href="game.html">Game</a></div>
+		  <div><a href="heroes.html">Heroes</a></div>
+		  <div><a href="news.html">News</a></div>
+		  <div><a href="esports.html">ESports</a></div>
+		</div>
+		<div>Settings</div>
+		</nav>
+	</header>
+	<main>
+		
+		</div>
+<!-- kidlat elements -->
+                    <div class="kidlatBox">
+                        <img src="assets/emp.png" >
+                        <img src="assets/emp2.png" style="--i:2;">
+                        <img src="assets/emp.png" style="--i:3;">
+                        <img src="assets/emp3.png" style="--i:4;">   
+                        <img src="assets/emp2.png" style="--i:5;">
+                        <img src="assets/emp.png" style="--i:6;">
+                        <img src="assets/emp.png" style="--i:6;">
+                    </div>
+                    <!-- invoker kid element -->
+                    <div class="invoker-kid">
+                        <img src="assets/invoker_kid.webp"/>
+                    </div>
+		
+	</main>
+  </body>
+</html>

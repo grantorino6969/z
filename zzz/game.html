@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+	*{
+	  margin:0;
+    	  padding: 0;
+	  box-sizing:border-box;
+	  text-decoration:none;
+	}
+	body{
+	  background:#111;
+	}
+	nav{
+	 position:absolute;
+	 z-index:99;
+	 width: 100vw;
+	 display:flex;
+	 justify-content:space-between;
+	 color:white;
+	 padding:.25em;
+	 padding-left:1em;
+	 padding-right:1em;
+	 font-size:1.5em;
+	 margin:0;
+	}
+	nav a{
+	 color:white;
+	}
+	.menu{
+	 display:flex;
+	 gap:2em; 
+	}
+	.video-container{
+	 width:100vw;
+	 top:-5em;
+	 position:absolute;
+	 margin:0;
+	 padding:0;
+	 background:#111;
+	}
+	.video-container video{
+	 width:100%;
+	 height: 100%;
+	 margin:0;
+	 padding:0;
+	}
+	.tour-container{
+	 display:flex;
+	 justify-content:center;
+	 align-items:center;
+	 width:100vw;	
+	 height:100vh;
+	}
+	.tour-btn{
+	 position:absolute;
+	 z-index:999;
+	 font-size:100px;
+	 font-weight:bold;
+	 color:yellow;
+	 }
+
+	.one{
+	 width:100vw;
+	 height:100vh;
+	 display:flex;
+	 justify-content:center;
+	}
+	.one-inner{
+	  background: linear-gradient(to bottom, red,#111);
+	  height:25vw;
+	  top:-20em;
+	  position:absolute;
+	  width:25vw;
+	  border-radius:50%;
+	}
+
+
+
+  /* INVOKER TECH STACK */
+  
+.invoker{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    index:-1; position:absolute;
+    top:35%;
+    animation: floating 2s ease-in-out infinite;
+    animation: bouncing 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes bouncing {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, -20px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ 
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+} 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .invoker img{
+    
+  }
+
+} 
+  
+.containerStack .icon{
+    position: relative;
+    left: -50%;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.containerStack .icon .imgBx{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    /* border-radius: 50%; */
+    transition: 0.5s;
+    /* border:1px solid #fff; */
+   /* box-shadow: 0 0 0 4px #222,
+   0 0 0 6px #fff; */
+   transform: rotate(calc(360deg/8 * var(--i)));
+   transform-origin: 375px;
+   z-index: 150;
+   overflow: visible;
+ 
+}
+.containerStack .icon .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    object-fit:cover;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+}
+
+@keyframes rotateContainer {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .containerStack {
+    top:-12em;
+    left:0.5em;
+    position: relative;
+    width:750px;
+    height: 750px;
+    /* border: 2px solid #fff; */
+    border-radius: 50%;
+    animation: rotateContainer 40s linear infinite;
+  }
+
+.bubbles-container{
+	
+	position:absolute;
+	z-index:-5;
+	width:100vw;
+	height:100vh;
+	overflow:hidden;
+	background:black;
+	display:flex;
+	justify-content:space-between;
+	}
+	.bubbles{
+	position:relative;
+	display:flex;
+	}
+	.bubbles span {
+	position:relative;
+	width:30px;
+	height:30px;
+	background:#d33905;
+	marigin:0 4px;
+	border-radius:50%;
+	box-shadow: 0 0 0 2px red, 0 0 50px #ff0000;
+	animation: animate1 15s linear infinite;
+	animation-duration:calc(120s / var(--i));
+	}
+	.bubbles span:nth-child(even) {
+	background: #ff5c33;
+	box-shadow: 0 0 0 10px #ff0000, 0 0 50px #ff5c33,
+			0 0 100px #ff5c33;
+	}
+
+@keyframes animate1 {
+	0% {
+		transform: translateY(100vh) scale(0);
+	}
+	10%{
+	  margin-left:1px;
+	}
+	
+	20%{
+	 margin-left:5px;
+	}
+	30%{
+	 margin-left:0px;
+	 margin-right:10px;
+	}
+
+	50% {
+		opacity:0.1;
+		
+	}
+	100% {
+		transform: translateY(0vh) scale(.30) translateX(0vw);
+		opacity:0;
+		
+		
+	}
+	
+    </style>
+  </head>
+  <body>
+	<header>
+		<nav>
+		
+		<div class="menu">
+		  <div><a href="z.html">Tour of Heroes</a></div>
+		  <div><a href="game.html">Game</a></div>
+		  <div><a href="heroes.html">Heroes</a></div>
+		  <div><a href="news.html">News</a></div>
+	  	  <div><a href="esports.html">ESports</a></div>
+		</div>
+		<div>Settings</div>
+		</nav>
+	</header>
+	<main>
+		
+ <div class="invoker">
+                            <img src="./assets/img/Invoker.png" alt="Invoker" style ="position:absolute;z-index:999;"/>
+                            <div class="containerStack" >
+                                <div class="icon">
+                                    <div class="imgBx" style="--i:1">
+                                        <img src="./assets/img/node-js.svg" alt="SVG Image" height="200" width="200">
+                                    </div>   
+                                    <div class="imgBx" style="--i:2">
+                                        <img src="./assets/img/logo.svg" alt="SVG Image" height="200" width="200">
+                                    </div>   
+                                    <div class="imgBx" style="--i:3">
+                                        <img src="./assets/img/pngwing.com.png" alt="SVG Image" height="200" width="200">
+                                    </div>    
+                                    <div class="imgBx" style="--i:4">
+                                        <img src="./assets/img/c-sharp.png" alt="SVG Image" height="200" width="200">
+                                    </div>     
+                                    <div class="imgBx" style="--i:5">    
+                                        <img src="./assets/img/javalogo.png" alt="SVG Image" height="200" width="200">
+                                    </div>      
+                                    <div class="imgBx" style="--i:6" >    
+                                        <img src="./assets/img/typescript.png" alt="SVG Image" height="200" width="200">
+                                    </div>     
+                                    <div class="imgBx" style="--i:7">
+                                        <img src="./assets/img/mongodb.png" alt="SVG Image" height="200" width="200">
+                                    </div>     
+                                    <div class="imgBx" style="--i:8">    
+                                        <img src="./assets/img/mysql.png" alt="SVG Image" height="200" width="200">
+                                    </div>
+                                </div>   
+                                
+                            </div>
+                        </div>
+                   
+ <div class="bubbles-container">
+	<div class="bubbles">
+	  	<span style="--i:11;"></span>
+		<span style="--i:12;"></span>
+		<span style="--i:24;"></span>
+		<span style="--i:10;"></span>
+<span style="--i:14;"></span>
+		<span style="--i:23;"></span>
+		<span style="--i:18;"></span>
+		<span style="--i:16;"></span>
+<span style="--i:19;"></span>
+		<span style="--i:20;"></span>
+		<span style="--i:22;"></span>
+		<span style="--i:25;"></span>
+<span style="--i:18;"></span>
+		<span style="--i:21;"></span>
+		<span style="--i:15;"></span>
+		<span style="--i:13;"></span>
+<span style="--i:26;"></span>
+		<span style="--i:17;"></span>
+		<span style="--i:13;"></span>
+		<span style="--i:28;"></span>
+
+	</div>
+<div class="bubbles">
+	  	<span style="--i:11;"></span>
+		<span style="--i:12;"></span>
+		<span style="--i:24;"></span>
+		<span style="--i:10;"></span>
+<span style="--i:14;"></span>
+		<span style="--i:23;"></span>
+		<span style="--i:18;"></span>
+		<span style="--i:16;"></span>
+<span style="--i:19;"></span>
+		<span style="--i:20;"></span>
+		<span style="--i:22;"></span>
+		<span style="--i:25;"></span>
+<span style="--i:18;"></span>
+		<span style="--i:21;"></span>
+		<span style="--i:15;"></span>
+		<span style="--i:13;"></span>
+<span style="--i:26;"></span>
+		<span style="--i:17;"></span>
+		<span style="--i:13;"></span>
+		<span style="--i:28;"></span>
+
+	</div>
+  </div>
+		
+	</main>
+  </body>
+</html>
