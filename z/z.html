@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+	*{
+	  margin:0;
+    	  padding: 0;
+	  box-sizing:border-box;
+	  text-decoration:none;
+	}
+	body{
+	  background:#111;
+	}
+	nav{
+	 position:absolute;
+	 z-index:99;
+	 width: 100vw;
+	 display:flex;
+	 justify-content:space-between;
+	 color:white;
+	 padding:.25em;
+	 padding-left:1em;
+	 padding-right:1em;
+	 font-size:1.5em;
+	 margin:0;
+	}
+	nav a{
+	 color:white;
+	}
+	.menu{
+	 display:flex;
+	 gap:2em; 
+	}
+	.video-container{
+	 width:100vw;
+	 top:-5em;
+	 position:absolute;
+	 margin:0;
+	 padding:0;
+	 background:#111;
+	}
+	.video-container video{
+	 width:100%;
+	 height: 100%;
+	 margin:0;
+	 padding:0;
+	}
+	.tour-container{
+	 display:flex;
+	 justify-content:center;
+	 align-items:center;
+	 width:100vw;	
+	 height:100vh;
+	 flex-direction:column;
+	 gap:5em;
+	}
+	.title{
+	 position:absolute;
+	 z-index:999;
+	 font-size:100px;
+	 font-weight:bold;
+	 color:yellow;
+
+	  background: repeating-linear-gradient(20deg, #a2682a 0%, #be8c3c 8%, #be8c3c 18%, #d3b15f 27%, #faf0a0 35%, #ffffc2 40%, #faf0a0 50%, #d3b15f 58%, #d3b15f 67%, #d28f36 77%, #bb8332 83%, #d3b15f 88%, #e1b453 93%, #a4692a 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  filter: drop-shadow(1px 2px 7px #401b00);
+  font-weight: 500;
+  //font-size:10em;
+  color: white;
+  font-family: "Cinzel", serif ;
+	 }
+	.golden-btn{
+	  font-size:25px;
+	  position:absolute;
+	  margin-top:10em;
+	  padding-left: .5em;
+	  padding-right: .5em;
+ display: inline-block;
+  outline: none;
+  font-family: inherit;
+  font-size: 1em;
+  box-sizing: border-box;
+  border: none;
+  border-radius: .3em;
+  height: 2.75em;
+  line-height: 2.5em;
+  text-transform: uppercase;
+  padding: 0 1em;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+              inset 0 -2px 5px 1px rgba(139,66,8,1),
+              inset 0 -1px 1px 3px rgba(250,227,133,1);
+  background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+  border: 1px solid #a55d07;
+  color: rgb(120,50,5);
+  text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  background-size: 100% 100%;
+  background-position:center;
+}
+.golden-btn:focus,
+.golden-btn:hover {
+  background-size: 150% 150%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23),
+                inset 0 -2px 5px 1px #b17d10,
+                inset 0 -1px 1px 3px rgba(250,227,133,1);
+  border: 1px solid rgba(165,93,7,.6);
+  color: rgba(120,50,5,.8);
+}
+.golden-btn:active {
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+              inset 0 -2px 5px 1px #b17d10,
+                inset 0 -1px 1px 3px rgba(250,227,133,1);
+}
+
+	.one{
+	 width:100vw;
+	 height:100vh;
+	 display:flex;
+	 justify-content:center;
+	}
+	.one-inner{
+	  background: linear-gradient(to bottom, red,#111);
+	  height:25vw;
+	  top:-20em;
+	  position:absolute;
+	  width:25vw;
+	  border-radius:50%;
+	}
+    </style>
+  </head>
+  <body>
+	<header>
+		<nav>
+		<div class="menu">
+		  <div><a href="z.html">Tour of Dota2 Heroes</a></div>
+		  <div><a href="game.html">Game</a></div>
+		  <div><a href="heroes.html">Heroes</a></div>
+		  <div><a href="news.html">News</a></div>
+		</div>
+		<div>Settings</div>
+		</nav>
+	</header>
+	<main>
+		<div class="video-container">
+		  <video width="320" height="240" autoplay muted loop>
+  		  <source src="dota2.mp4" type="video/mp4">
+  		  <source src="dota2.mp4" type="video/ogg">
+		  Your browser does not support the video tag.
+ 		  </video> 
+		</div>
+		<div class="tour-container">
+			<h1 class="title"> Tour of Heroes</h1>
+			<button class="golden-btn" > Start </button>
+		</div>
+	</main>
+  </body>
+</html>
